@@ -1,0 +1,24 @@
+{
+  "name": "gatsby-forestry-starter",
+  "version": "1.0.0",
+  "description": "Starter for Gatsby/Forestry projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottqmn/gatsby-forestry-starter.git"
+  },
+  "author": "scottqmn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottqmn/gatsby-forestry-starter/issues"
+  },
+  "homepage": "https://github.com/scottqmn/gatsby-forestry-starter#readme",
+  "dependencies": {
+    "gatsby": "^2.22.13",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
