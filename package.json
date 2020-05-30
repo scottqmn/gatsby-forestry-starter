@@ -4,6 +4,7 @@
   "description": "Starter for Gatsby/Forestry projects",
   "main": "index.js",
   "scripts": {
+    "start": "gatsby develop",
     "test": "test"
   },
   "repository": {
