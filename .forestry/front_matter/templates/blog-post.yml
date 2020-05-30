@@ -27,4 +27,5 @@ fields:
       format: markdown
   label: Body
 pages:
+- content/posts/hello-again.md
 - content/posts/hello-world.md
