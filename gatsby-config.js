@@ -26,15 +26,28 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "locations",
+        path: `${__dirname}/content/locations`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "gatsby-forestry-starter",
+        short_name: "gatsby-forestry",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
+        icon: "content/images/gazebo.png", // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        defaultQuality: 75,
       },
     },
     "gatsby-transformer-remark",
@@ -55,12 +68,6 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-plugin-sharp",
-      options: {
-        defaultQuality: 75,
-      },
-    },
     "gatsby-transformer-yaml",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -6,7 +6,7 @@ import {
 } from "gatsby"
 // import useBlogData from "../static_queries/useBlogData"
 //this component handles the blur img & fade-ins
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 
 export default props => {
   const data = props.data.markdownRemark
@@ -25,20 +25,20 @@ export default props => {
   //   }
   // }
 
+  // console.log(data.frontmatter.hero_image.childImageSharp)
   return (
     <Layout>
       <article>
-        <figure>
-          {/* <Img
-            // fluid={data.frontmatter.hero_image.childImageSharp.fluid}
-            alt={data.frontmatter.title}
-          /> */}
-        </figure>
+        {/* <figure>
+          <Img
+            fluid={data.frontmatter.hero_image.childImageSharp.fluid}
+            alt={data.frontmatter.name}
+          />
+        </figure> */}
         <div>
-          <h1>{data.frontmatter.title}</h1>
-          asdfasdf
-          {/* <h3>{data.frontmatter.date}</h3> */}
+          <h1>{data.frontmatter.name}</h1>
         </div>
+        <div>{data.frontmatter.description}</div>
         <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
         <div>
           {/* <h2>Written By: {data.frontmatter.author}</h2> */}
@@ -62,15 +62,15 @@ export default props => {
 
 //dynamic page query, must occur within each post context
 //$slug is made available by context from createPages call in gatsby-node.js
-export const getPostData = graphql`
+export const getLocationData = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
       frontmatter {
-        title
-        body
+        name
+        description
       }
       html
     }
