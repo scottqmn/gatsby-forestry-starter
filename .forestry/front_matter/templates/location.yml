@@ -25,3 +25,5 @@ fields:
   type: image_gallery
   config: {}
   label: Image Carousel
+pages:
+- content/locations/orange.md
