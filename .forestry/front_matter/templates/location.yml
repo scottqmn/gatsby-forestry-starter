@@ -26,4 +26,5 @@ fields:
   config: {}
   label: Image Carousel
 pages:
+- content/locations/carson.md
 - content/locations/orange.md
