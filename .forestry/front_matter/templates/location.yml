@@ -1,4 +1,27 @@
 ---
 label: Location
 hide_body: false
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: hero_image
+  type: file
+  config:
+    maxSize: 64
+  label: Hero Image
+- name: image_carousel
+  type: image_gallery
+  config: {}
+  label: Image Carousel
