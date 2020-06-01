@@ -1,17 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
-import {
-  graphql,
-  // Link
-} from "gatsby"
-// import useBlogData from "../static_queries/useBlogData"
-//this component handles the blur img & fade-ins
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 export default props => {
   const data = props.data.markdownRemark
 
-  console.log(data)
   return (
     <Layout>
       <article>
