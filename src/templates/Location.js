@@ -29,12 +29,12 @@ export default props => {
   return (
     <Layout>
       <article>
-        {/* <figure>
-          <Img
+        <figure>
+          {/* <Img
             fluid={data.frontmatter.hero_image.childImageSharp.fluid}
             alt={data.frontmatter.name}
-          />
-        </figure> */}
+          /> */}
+        </figure>
         <div>
           <h1>{data.frontmatter.name}</h1>
         </div>
@@ -71,6 +71,16 @@ export const getLocationData = graphql`
       frontmatter {
         name
         description
+        # hero_image
+        hero_image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          publicURL
+        }
+        image_carousel
       }
       html
     }

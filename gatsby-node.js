@@ -1,11 +1,13 @@
 const path = require("path")
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 module.exports.onCreateNode = ({ node, actions }) => {
   // Transform the new node here and create a new node or
   // create a new node field.
   const { createNodeField } = actions
+  fmImagesToRelative(node)
+
   if (node.internal.type === "MarkdownRemark") {
-    console.log("node", node, node.fileAbsolutePath)
     const slug = path.basename(node.fileAbsolutePath, ".md")
     createNodeField({
       node,
