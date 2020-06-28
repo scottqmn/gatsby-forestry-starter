@@ -1,7 +1,8 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Layout from "../components/Layout"
+import ImageCarousel from "../components/ImageCarousel"
 
 export default props => {
   const data = props.data.markdownRemark
@@ -19,7 +20,12 @@ export default props => {
           <h1>{data.frontmatter.name}</h1>
         </div>
         <div>{data.frontmatter.description}</div>
-        <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+        {data.frontmatter.image_carousel && (
+          <ImageCarousel images={data.frontmatter.image_carousel} />
+        )}
+        {data.html && (
+          <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+        )}
       </article>
     </Layout>
   )
