@@ -10,14 +10,6 @@ export default () => {
             frontmatter {
               publish_date
               title
-              hero_image {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
               description
             }
             fields {

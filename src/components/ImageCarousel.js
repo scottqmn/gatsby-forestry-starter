@@ -8,7 +8,7 @@ export default ({ images = [] }) => {
       {images.map(src => (
         <li key={`carousel-${src}`}>
           {src}
-          <img src={src} />
+          <img src={src} alt="placeholder" />
         </li>
       ))}
     </ul>

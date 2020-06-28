@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-yaml",
     {
@@ -40,24 +39,26 @@ module.exports = {
         path: `${__dirname}/content/images`,
       },
     },
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-sharp",
       options: {
         defaultQuality: 75,
       },
     },
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
           "gatsby-remark-normalize-paths",
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1000,
-              linkImagesToOriginal: false,
+              // linkImagesToOriginal: false,
             },
           },
         ],
