@@ -18,13 +18,15 @@ export default () => {
   return (
     <Header>
       <div className="container">
-        <ul className="inner">
-          {ROUTES.map(({ url, name }, i) => (
-            <li key={`header-${name.toLowerCase()}-${i}`}>
-              <a href={url}>{name}</a>
-            </li>
-          ))}
-        </ul>
+        <div className="inner">
+          <ul>
+            {ROUTES.map(({ url, name }, i) => (
+              <li key={`header-${name.toLowerCase()}-${i}`}>
+                <a href={url}>{name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Header>
   )

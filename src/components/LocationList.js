@@ -1,27 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
-import useBlogData from "../static_queries/useBlogData"
+import useLocationData from "../static_queries/useLocationData"
 
 export default () => {
-  const blogData = useBlogData()
+  const locationData = useLocationData()
 
   return (
     <section className="container">
       <div className="inner">
-        <h2>Blog Posts</h2>
-        {blogData.length ? (
+        <h2>Locations</h2>
+        {locationData.length ? (
           <ul>
-            {blogData.map(({ node }) => {
+            {locationData.map(({ node }) => {
               const { id, frontmatter, fields } = node
               return (
                 <li key={id}>
-                  <Link to={`/blog/${fields.slug}`}>{frontmatter.title}</Link>
+                  <Link to={`/location/${fields.slug}`}>
+                    {frontmatter.name}
+                  </Link>
                 </li>
               )
             })}
           </ul>
         ) : (
-          <div>no posts</div>
+          <div>no locations</div>
         )}
       </div>
     </section>

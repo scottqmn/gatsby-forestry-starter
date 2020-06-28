@@ -1,12 +1,14 @@
-import React from "react";
-import Layout from "../components/Layout";
-import BlogPostList from "../components/BlogPostList";
+import React from "react"
+import Layout from "../components/Layout"
 
 export default function App() {
   return (
     <Layout>
-      <h1>Hello Gatsby!</h1>
-      <BlogPostList />
+      <div className="container">
+        <div className="inner">
+          <h1>Hello Gatsby!</h1>
+        </div>
+      </div>
     </Layout>
-  );
+  )
 }
