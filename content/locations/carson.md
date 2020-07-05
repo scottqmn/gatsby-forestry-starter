@@ -11,7 +11,10 @@ image_carousel:
 - "/content/images/carson-1.jpg"
 image_group:
 - image_group_item: "/content/images/carson-3.jpg"
+  image_group_title: Carson 1
 - image_group_item: "/content/images/carson-2.jpg"
+  image_group_title: Carson 2
 - image_group_item: "/content/images/carson-1.jpg"
+  image_group_title: Carson 3
 
 ---
