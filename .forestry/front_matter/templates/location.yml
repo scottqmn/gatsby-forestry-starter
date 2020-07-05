@@ -28,6 +28,11 @@ fields:
 - name: image_group
   type: field_group_list
   fields:
+  - name: image_group_title
+    type: text
+    config:
+      required: false
+    label: Image Group Title
   - name: image_group_item
     type: file
     config:
@@ -36,7 +41,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: image_group_title
   label: Image Group
 pages:
 - content/locations/carson.md
