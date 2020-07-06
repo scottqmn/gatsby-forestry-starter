@@ -11,10 +11,9 @@ export default () => {
             id
             frontmatter {
               name
-              description
               hero_image {
                 childImageSharp {
-                  fluid(maxWidth: 150) {
+                  fluid(maxWidth: 50) {
                     ...GatsbyImageSharpFluid
                   }
                 }

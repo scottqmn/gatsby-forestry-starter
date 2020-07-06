@@ -5,8 +5,12 @@ import LocationList from "../components/LocationList"
 export default () => {
   return (
     <Layout>
-      <h1>Locations</h1>
-      <LocationList />
+      <div className="container">
+        <div className="inner">
+          <h1>Locations</h1>
+          <LocationList />
+        </div>
+      </div>
     </Layout>
   )
 }
