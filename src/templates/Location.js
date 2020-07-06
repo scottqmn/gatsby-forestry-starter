@@ -17,15 +17,24 @@ export default props => {
             alt={data.frontmatter.name}
           />
         </figure>
-        <div>
-          <h1>{data.frontmatter.name}</h1>
+
+        <div className="container">
+          <div className="inner">
+            <h1>{data.frontmatter.name}</h1>
+            <div>{data.frontmatter.description}</div>
+          </div>
         </div>
-        <div>{data.frontmatter.description}</div>
+
         {data.frontmatter.image_carousel && (
           <ImageCarousel images={data.frontmatter.image_carousel} />
         )}
+
         {data.html && (
-          <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+          <div className="container">
+            <div className="inner">
+              <div dangerouslySetInnerHTML={{ __html: data.html }}></div>
+            </div>
+          </div>
         )}
       </article>
     </Layout>
@@ -45,19 +54,20 @@ export const getLocationData = graphql`
         description
         hero_image {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 900) {
               ...GatsbyImageSharpFluid
             }
           }
-          publicURL
+          name
         }
         image_carousel {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 900) {
               ...GatsbyImageSharpFluid
             }
           }
-          publicURL
+          name
+          id
         }
       }
       html

@@ -14,7 +14,7 @@ export default () => {
               description
               hero_image {
                 childImageSharp {
-                  fluid(maxWidth: 400) {
+                  fluid(maxWidth: 150) {
                     ...GatsbyImageSharpFluid
                   }
                 }
