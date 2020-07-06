@@ -18,6 +18,7 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    // List before MD files to fix image_gallery
     {
       resolve: `gatsby-source-filesystem`,
       options: {
