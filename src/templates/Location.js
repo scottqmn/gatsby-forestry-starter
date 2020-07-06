@@ -6,6 +6,7 @@ import ImageCarousel from "../components/ImageCarousel"
 
 export default props => {
   const data = props.data.markdownRemark
+  console.log(data.frontmatter)
 
   return (
     <Layout>
@@ -50,7 +51,14 @@ export const getLocationData = graphql`
           }
           publicURL
         }
-        image_carousel
+        image_carousel {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+          publicURL
+        }
       }
       html
     }

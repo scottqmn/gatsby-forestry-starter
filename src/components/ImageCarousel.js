@@ -1,14 +1,14 @@
 import React from "react"
+import Img from "gatsby-image"
 
 export default ({ images = [] }) => {
   console.log(images)
 
   return images.length ? (
     <ul>
-      {images.map(src => (
-        <li key={`carousel-${src}`}>
-          {src}
-          <img src={src} alt="placeholder" />
+      {images.map((image, index) => (
+        <li key={`carousel-${index}`}>
+          <Img fluid={image.childImageSharp.fluid} />
         </li>
       ))}
     </ul>

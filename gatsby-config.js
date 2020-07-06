@@ -19,6 +19,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/content/images`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
@@ -32,20 +39,8 @@ module.exports = {
         path: `${__dirname}/content/locations`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "images",
-        path: `${__dirname}/content/images`,
-      },
-    },
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-plugin-sharp",
-      options: {
-        defaultQuality: 75,
-      },
-    },
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {

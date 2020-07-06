@@ -19,7 +19,6 @@ export default () => {
                   }
                 }
               }
-              image_carousel
             }
             fields {
               slug
