@@ -1,6 +1,6 @@
 ---
 label: Gallery
-hide_body: false
+hide_body: true
 fields:
 - name: images
   type: image_gallery
