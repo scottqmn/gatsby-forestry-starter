@@ -1,4 +1,23 @@
 ---
 label: Carousel
 hide_body: false
-fields: []
+fields:
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: style
+  type: select
+  default: Carousel
+  config:
+    required: true
+    options:
+    - Carousel
+    - Device
+    - Thumbnail
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Style
