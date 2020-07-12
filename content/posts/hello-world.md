@@ -2,6 +2,7 @@
 publish_date: 2020-05-30T19:06:04.000+00:00
 title: Hello World
 body: ''
+description: This is the one where I greet the world
 
 ---
 # Dolor ergo, id est summum malum, metuetur semper, etiamsi non aderit;
