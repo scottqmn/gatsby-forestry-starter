@@ -1,4 +1,53 @@
 ---
 label: Project
 hide_body: false
-fields: []
+display_field: name
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: image_gallery
+  type: include
+  config: {}
+  template: carousel
+  label: Image Gallery
+- name: accent_color
+  type: color
+  label: Accent Color
+  config:
+    required: false
+    color_format: Hex
+  default: 
+- name: details
+  type: field_group_list
+  fields:
+  - name: group
+    type: text
+    config:
+      required: false
+    label: Type
+  - name: items
+    type: tag_list
+    default: []
+    label: Items
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Details
