@@ -5,7 +5,7 @@ fields:
 - name: images
   type: image_gallery
   config: {}
-  label: Images
+  label: Gallery Images
 - name: style
   type: select
   default: Carousel
@@ -20,4 +20,4 @@ fields:
       section: 
       file: 
       path: 
-  label: Style
+  label: Gallery Style
