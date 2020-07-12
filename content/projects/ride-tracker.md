@@ -16,6 +16,7 @@ details:
   - NgRx
   - TypeScript
   - Custom API
+hero_image: "/content/images/scooter_hero.jpg"
 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc omni virtuti vitium contrario nomine opponitur. Non igitur de improbo, sed de callido improbo quaerimus, qualis Q. Nos quidem Virtutes sic natae sumus, ut tibi serviremus, aliud negotii nihil habemus. Quae cum dixisset paulumque institisset, Quid est? Ut enim consuetudo loquitur, id solum dicitur honestum, quod est populari fama gloriosum. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quid ergo attinet gloriose loqui, nisi constanter loquare? Duo Reges: constructio interrete. Consequentia exquirere, quoad sit id, quod volumus, effectum. Quia, si mala sunt, is, qui erit in iis, beatus non erit. Iam enim adesse poterit.
